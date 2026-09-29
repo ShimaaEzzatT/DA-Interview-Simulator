@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Section 01 — Core Data Analytics
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="interview.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="top-navbar">
+
+    <!-- LOGO -->
+
+    <div class="brand">
+
+        <div class="brand-icon">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </div>
+
+
+        <div class="brand-name">
+
+            <span class="brand-ar">
+                آلاء عصام
+            </span>
+
+            <span class="brand-en">
+                alaa essam
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <!-- NAVIGATION -->
+
+    <nav class="nav-links">
+
+        <a href="#overview">
+            Overview
+        </a>
+
+        <a href="#fundamentals">
+            Fundamentals
+        </a>
+
+        <a href="#tools">
+            Tools
+        </a>
+
+        <a href="#challenges">
+            Challenges
+        </a>
+
+        <a href="#case-study">
+            Case Study
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main>
+
+
+    <!-- =================================================
+         HERO
+    ================================================== -->
+
+    <section
+        class="hero"
+        id="overview"
+    >
+
+        <div class="hero-content">
+
+
+            <div class="hero-badge">
+
+                <span></span>
+
+                Technical Interview Preparation
+
+            </div>
+
+
+            <h1>
+
+                Core Data
+
+                <strong>
+                    Analytics
+                </strong>
+
+            </h1>
+
+
+            <p>
+
+                Test your understanding of Data Analytics
+                fundamentals, KPIs, data quality,
+                analytical thinking, and business scenarios.
+
+            </p>
+
+
+            <div class="hero-stats">
+
+
+                <div class="stat">
+
+                    <strong>
+                        25
+                    </strong>
+
+                    <span>
+                        Questions
+                    </span>
+
+                </div>
+
+
+                <div class="stat">
+
+                    <strong>
+                        5
+                    </strong>
+
+                    <span>
+                        Topics
+                    </span>
+
+                </div>
+
+
+                <div class="stat">
+
+                    <strong>
+                        MCQ
+                    </strong>
+
+                    <span>
+                        Assessment
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         SECTION INTRO
+    ================================================== -->
+
+    <section
+        class="section-intro"
+        id="fundamentals"
+    >
+
+        <div class="section-tag">
+            SECTION 01
+        </div>
+
+
+        <h2>
+
+            Core Data Analytics
+
+            <span>
+                Assessment
+            </span>
+
+        </h2>
+
+
+        <p>
+
+            Choose the best answer for each question.
+            Your score will be calculated automatically
+            when you finish the assessment.
+
+        </p>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         ASSESSMENT
+    ================================================== -->
+
+    <section class="assessment-wrapper">
+
+
+        <!-- PROGRESS -->
+
+        <div class="assessment-top">
+
+
+            <div>
+
+                <span class="progress-label">
+                    Assessment Progress
+                </span>
+
+
+                <strong id="progressText">
+                    0 / 25
+                </strong>
+
+            </div>
+
+
+            <div class="progress-bar">
+
+                <div
+                    class="progress-fill"
+                    id="progressFill"
+                ></div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- QUESTIONS -->
+
+        <div
+            id="questionsContainer"
+            class="questions-container"
+        >
+
+        </div>
+
+
+
+        <!-- FINISH -->
+
+        <div class="finish-area">
+
+            <p id="finishMessage">
+
+                Answer all questions before submitting
+                your assessment.
+
+            </p>
+
+
+            <button
+                id="finishBtn"
+                class="finish-btn"
+                disabled
+            >
+
+                Finish Assessment
+
+                <span>
+                    →
+                </span>
+
+            </button>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         RESULT
+    ================================================== -->
+
+    <section
+        id="resultSection"
+        class="result-section"
+    >
+
+
+        <div class="result-card">
+
+
+            <div class="result-badge">
+
+                ✓
+
+            </div>
+
+
+            <div class="section-tag">
+
+                ASSESSMENT COMPLETE
+
+            </div>
+
+
+            <h2>
+
+                Your Assessment
+
+                <span>
+                    Result
+                </span>
+
+            </h2>
+
+
+            <p>
+
+                Here is your performance in
+                Section 01 — Core Data Analytics.
+
+            </p>
+
+
+
+            <!-- SCORE -->
+
+            <div class="score-circle">
+
+                <div>
+
+                    <strong id="scorePercentage">
+                        0%
+                    </strong>
+
+                    <span>
+                        Score
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- RESULT STATS -->
+
+            <div class="result-stats">
+
+
+                <div class="result-stat correct">
+
+                    <strong id="correctCount">
+                        0
+                    </strong>
+
+                    <span>
+                        Correct
+                    </span>
+
+                </div>
+
+
+                <div class="result-stat wrong">
+
+                    <strong id="wrongCount">
+                        0
+                    </strong>
+
+                    <span>
+                        Wrong
+                    </span>
+
+                </div>
+
+
+                <div class="result-stat unanswered">
+
+                    <strong id="unansweredCount">
+                        0
+                    </strong>
+
+                    <span>
+                        Unanswered
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- RESULT MESSAGE -->
+
+            <div
+                id="resultMessage"
+                class="result-message"
+            ></div>
+
+
+            <!-- RETRY -->
+
+            <button
+                id="retryBtn"
+                class="retry-btn"
+            >
+
+                Retake Assessment
+
+            </button>
+
+
+        </div>
+
+
+        <!-- REVIEW -->
+
+        <div class="review-card">
+
+            <div class="review-header">
+
+                <div>
+
+                    <span class="section-tag">
+                        REVIEW
+                    </span>
+
+                    <h3>
+                        Answer Review
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="reviewContainer"
+                class="review-container"
+            ></div>
+
+        </div>
+
+
+    </section>
+
+
+
+</main>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script src="interview.js"></script>
+
+</body>
+
+</html>
