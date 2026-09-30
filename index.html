@@ -480,6 +480,345 @@
 
 
 
+<!-- ==================== TOOLS SECTION ==================== -->
+
+<section id="tools" class="tools-section">
+
+    <div class="tools-container">
+
+        <!-- Section Header -->
+        <div class="tools-header">
+
+            <span class="tools-label">TECHNICAL ASSESSMENT</span>
+
+            <h2>
+                Data Analytics <span>Tools</span>
+            </h2>
+
+            <p>
+                Test your technical knowledge across the main tools used
+                in Data Analytics.
+            </p>
+
+        </div>
+
+
+        <!-- Tool Cards -->
+        <div class="tools-grid">
+
+            <!-- Excel -->
+            <div class="tool-card">
+                <div class="tool-number">01</div>
+
+                <div class="tool-icon">📊</div>
+
+                <h3>Excel</h3>
+
+                <p>
+                    Functions, Pivot Tables, Lookups,
+                    formulas and data analysis.
+                </p>
+
+                <div class="tool-info">
+                    <span>6 Questions</span>
+                    <span>Technical</span>
+                </div>
+            </div>
+
+
+            <!-- Power Query -->
+            <div class="tool-card">
+                <div class="tool-number">02</div>
+
+                <div class="tool-icon">⚙️</div>
+
+                <h3>Power Query</h3>
+
+                <p>
+                    Data cleaning, transformation,
+                    Merge, Append and ETL.
+                </p>
+
+                <div class="tool-info">
+                    <span>6 Questions</span>
+                    <span>Technical</span>
+                </div>
+            </div>
+
+
+            <!-- Power BI -->
+            <div class="tool-card">
+                <div class="tool-number">03</div>
+
+                <div class="tool-icon">📈</div>
+
+                <h3>Power BI</h3>
+
+                <p>
+                    Data Modeling, Relationships,
+                    Semantic Models and Reporting.
+                </p>
+
+                <div class="tool-info">
+                    <span>6 Questions</span>
+                    <span>Technical</span>
+                </div>
+            </div>
+
+
+            <!-- DAX -->
+            <div class="tool-card">
+                <div class="tool-number">04</div>
+
+                <div class="tool-icon">🧮</div>
+
+                <h3>DAX</h3>
+
+                <p>
+                    Measures, Filter Context,
+                    CALCULATE and Time Intelligence.
+                </p>
+
+                <div class="tool-info">
+                    <span>6 Questions</span>
+                    <span>Technical</span>
+                </div>
+            </div>
+
+
+            <!-- SQL -->
+            <div class="tool-card">
+                <div class="tool-number">05</div>
+
+                <div class="tool-icon">🗄️</div>
+
+                <h3>SQL</h3>
+
+                <p>
+                    Queries, Joins, Aggregations,
+                    CTEs and Window Functions.
+                </p>
+
+                <div class="tool-info">
+                    <span>6 Questions</span>
+                    <span>Technical</span>
+                </div>
+            </div>
+
+
+            <!-- Python -->
+            <div class="tool-card">
+                <div class="tool-number">06</div>
+
+                <div class="tool-icon">🐍</div>
+
+                <h3>Python</h3>
+
+                <p>
+                    Pandas, DataFrames, GroupBy,
+                    Merge and Data Cleaning.
+                </p>
+
+                <div class="tool-info">
+                    <span>6 Questions</span>
+                    <span>Technical</span>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- Assessment Area -->
+        <div class="tools-assessment">
+
+            <div class="assessment-top">
+
+                <div>
+                    <span class="assessment-label">
+                        FULL TOOLS ASSESSMENT
+                    </span>
+
+                    <h3>
+                        Ready to test your technical skills?
+                    </h3>
+
+                    <p>
+                        40 technical questions covering Excel,
+                        Power Query, Power BI, DAX, SQL and Python.
+                    </p>
+                </div>
+
+                <div class="assessment-stat">
+                    <strong>40</strong>
+                    <span>Questions</span>
+                </div>
+
+            </div>
+
+            <button
+                class="tools-start-btn"
+                onclick="startToolsAssessment()">
+
+                Start Assessment
+                <span>→</span>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==================== TOOLS QUIZ MODAL ==================== -->
+
+<div id="toolsQuizModal" class="tools-quiz-modal">
+
+    <div class="tools-quiz-box">
+
+        <!-- Quiz Header -->
+        <div class="quiz-header">
+
+            <div>
+                <span class="quiz-section-name">
+                    TOOLS ASSESSMENT
+                </span>
+
+                <h2 id="quizCategory">
+                    Excel
+                </h2>
+            </div>
+
+            <button
+                class="quiz-close"
+                onclick="closeToolsAssessment()">
+                ×
+            </button>
+
+        </div>
+
+
+        <!-- Progress -->
+        <div class="quiz-progress-area">
+
+            <div class="quiz-progress-info">
+
+                <span id="quizQuestionNumber">
+                    Question 1 of 40
+                </span>
+
+                <span id="quizScore">
+                    Score: 0
+                </span>
+
+            </div>
+
+            <div class="quiz-progress">
+
+                <div
+                    id="quizProgressBar"
+                    class="quiz-progress-bar">
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Question -->
+        <div class="quiz-question-area">
+
+            <span
+                id="quizType"
+                class="quiz-type">
+                MCQ
+            </span>
+
+            <h3 id="quizQuestion">
+                Question goes here
+            </h3>
+
+            <div id="quizOptions" class="quiz-options">
+            </div>
+
+        </div>
+
+
+        <!-- Feedback -->
+        <div
+            id="quizFeedback"
+            class="quiz-feedback">
+        </div>
+
+
+        <!-- Controls -->
+        <div class="quiz-controls">
+
+            <button
+                id="quizNextBtn"
+                class="quiz-next-btn"
+                onclick="nextToolsQuestion()"
+                disabled>
+
+                Next Question →
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ==================== TOOLS RESULT ==================== -->
+
+<div id="toolsResultModal" class="tools-result-modal">
+
+    <div class="tools-result-box">
+
+        <span class="result-label">
+            ASSESSMENT COMPLETED
+        </span>
+
+        <h2>
+            Your Technical Score
+        </h2>
+
+        <div class="result-score">
+            <span id="finalScore">0</span>
+            <small>/ 40</small>
+        </div>
+
+        <p id="resultMessage">
+            Great work!
+        </p>
+
+        <div class="result-actions">
+
+            <button
+                onclick="restartToolsAssessment()"
+                class="result-restart-btn">
+
+                Try Again
+
+            </button>
+
+            <button
+                onclick="closeToolsResult()"
+                class="result-close-btn">
+
+                Close
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
 </main>
 
 
@@ -493,3 +832,4 @@
 </body>
 
 </html>
+
