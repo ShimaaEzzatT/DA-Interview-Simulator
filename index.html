@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Section 01 — Core Data Analytics
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="interview.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="top-navbar">
+
+    <!-- LOGO -->
+
+    <div class="brand">
+
+        <div class="brand-icon">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </div>
+
+
+        <div class="brand-name">
+
+            <span class="brand-ar">
+                آلاء عصام
+            </span>
+
+            <span class="brand-en">
+                alaa essam
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <!-- NAVIGATION -->
+
+    <nav class="nav-links">
+
+        <a href="#overview">
+            Overview
+        </a>
+
+        <a href="#fundamentals">
+            Fundamentals
+        </a>
+
+        <a href="#tools">
+            Tools
+        </a>
+
+        <a href="#challenges">
+            Challenges
+        </a>
+
+        <a href="#case-study">
+            Case Study
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main>
+
+
+    <!-- =================================================
+         HERO
+    ================================================== -->
+
+    <section
+        class="hero"
+        id="overview"
+    >
+
+        <div class="hero-content">
+
+
+            <div class="hero-badge">
+
+                <span></span>
+
+                Technical Interview Preparation
+
+            </div>
+
+
+            <h1>
+
+                Core Data
+
+                <strong>
+                    Analytics
+                </strong>
+
+            </h1>
+
+
+            <p>
+
+                Test your understanding of Data Analytics
+                fundamentals, KPIs, data quality,
+                analytical thinking, and business scenarios.
+
+            </p>
+
+
+            <div class="hero-stats">
+
+
+                <div class="stat">
+
+                    <strong>
+                        25
+                    </strong>
+
+                    <span>
+                        Questions
+                    </span>
+
+                </div>
+
+
+                <div class="stat">
+
+                    <strong>
+                        5
+                    </strong>
+
+                    <span>
+                        Topics
+                    </span>
+
+                </div>
+
+
+                <div class="stat">
+
+                    <strong>
+                        MCQ
+                    </strong>
+
+                    <span>
+                        Assessment
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         SECTION INTRO
+    ================================================== -->
+
+    <section
+        class="section-intro"
+        id="fundamentals"
+    >
+
+        <div class="section-tag">
+            SECTION 01
+        </div>
+
+
+        <h2>
+
+            Core Data Analytics
+
+            <span>
+                Assessment
+            </span>
+
+        </h2>
+
+
+        <p>
+
+            Choose the best answer for each question.
+            Your score will be calculated automatically
+            when you finish the assessment.
+
+        </p>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         ASSESSMENT
+    ================================================== -->
+
+    <section class="assessment-wrapper">
+
+
+        <!-- PROGRESS -->
+
+        <div class="assessment-top">
+
+
+            <div>
+
+                <span class="progress-label">
+                    Assessment Progress
+                </span>
+
+
+                <strong id="progressText">
+                    0 / 25
+                </strong>
+
+            </div>
+
+
+            <div class="progress-bar">
+
+                <div
+                    class="progress-fill"
+                    id="progressFill"
+                ></div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- QUESTIONS -->
+
+        <div
+            id="questionsContainer"
+            class="questions-container"
+        >
+
+        </div>
+
+
+
+        <!-- FINISH -->
+
+        <div class="finish-area">
+
+            <p id="finishMessage">
+
+                Answer all questions before submitting
+                your assessment.
+
+            </p>
+
+
+            <button
+                id="finishBtn"
+                class="finish-btn"
+                disabled
+            >
+
+                Finish Assessment
+
+                <span>
+                    →
+                </span>
+
+            </button>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         RESULT
+    ================================================== -->
+
+    <section
+        id="resultSection"
+        class="result-section"
+    >
+
+
+        <div class="result-card">
+
+
+            <div class="result-badge">
+
+                ✓
+
+            </div>
+
+
+            <div class="section-tag">
+
+                ASSESSMENT COMPLETE
+
+            </div>
+
+
+            <h2>
+
+                Your Assessment
+
+                <span>
+                    Result
+                </span>
+
+            </h2>
+
+
+            <p>
+
+                Here is your performance in
+                Section 01 — Core Data Analytics.
+
+            </p>
+
+
+
+            <!-- SCORE -->
+
+            <div class="score-circle">
+
+                <div>
+
+                    <strong id="scorePercentage">
+                        0%
+                    </strong>
+
+                    <span>
+                        Score
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- RESULT STATS -->
+
+            <div class="result-stats">
+
+
+                <div class="result-stat correct">
+
+                    <strong id="correctCount">
+                        0
+                    </strong>
+
+                    <span>
+                        Correct
+                    </span>
+
+                </div>
+
+
+                <div class="result-stat wrong">
+
+                    <strong id="wrongCount">
+                        0
+                    </strong>
+
+                    <span>
+                        Wrong
+                    </span>
+
+                </div>
+
+
+                <div class="result-stat unanswered">
+
+                    <strong id="unansweredCount">
+                        0
+                    </strong>
+
+                    <span>
+                        Unanswered
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- RESULT MESSAGE -->
+
+            <div
+                id="resultMessage"
+                class="result-message"
+            ></div>
+
+
+            <!-- RETRY -->
+
+            <button
+                id="retryBtn"
+                class="retry-btn"
+            >
+
+                Retake Assessment
+
+            </button>
+
+
+        </div>
+
+
+        <!-- REVIEW -->
+
+        <div class="review-card">
+
+            <div class="review-header">
+
+                <div>
+
+                    <span class="section-tag">
+                        REVIEW
+                    </span>
+
+                    <h3>
+                        Answer Review
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="reviewContainer"
+                class="review-container"
+            ></div>
+
+        </div>
+
+
+    </section>
+
+
+
+<!-- ==================== TOOLS SECTION ==================== -->
+
+<section id="tools" class="tools-section">
+
+    <div class="tools-container">
+
+        <!-- Section Header -->
+        <div class="tools-header">
+
+            <span class="tools-label">TECHNICAL ASSESSMENT</span>
+
+            <h2>
+                Data Analytics <span>Tools</span>
+            </h2>
+
+            <p>
+                Test your technical knowledge across the main tools used
+                in Data Analytics.
+            </p>
+
+        </div>
+
+
+        <!-- Tool Cards -->
+        <div class="tools-grid">
+
+            <!-- Excel -->
+            <div class="tool-card">
+                <div class="tool-number">01</div>
+
+                <div class="tool-icon">📊</div>
+
+                <h3>Excel</h3>
+
+                <p>
+                    Functions, Pivot Tables, Lookups,
+                    formulas and data analysis.
+                </p>
+
+                <div class="tool-info">
+                    <span>6 Questions</span>
+                    <span>Technical</span>
+                </div>
+            </div>
+
+
+            <!-- Power Query -->
+            <div class="tool-card">
+                <div class="tool-number">02</div>
+
+                <div class="tool-icon">⚙️</div>
+
+                <h3>Power Query</h3>
+
+                <p>
+                    Data cleaning, transformation,
+                    Merge, Append and ETL.
+                </p>
+
+                <div class="tool-info">
+                    <span>6 Questions</span>
+                    <span>Technical</span>
+                </div>
+            </div>
+
+
+            <!-- Power BI -->
+            <div class="tool-card">
+                <div class="tool-number">03</div>
+
+                <div class="tool-icon">📈</div>
+
+                <h3>Power BI</h3>
+
+                <p>
+                    Data Modeling, Relationships,
+                    Semantic Models and Reporting.
+                </p>
+
+                <div class="tool-info">
+                    <span>6 Questions</span>
+                    <span>Technical</span>
+                </div>
+            </div>
+
+
+            <!-- DAX -->
+            <div class="tool-card">
+                <div class="tool-number">04</div>
+
+                <div class="tool-icon">🧮</div>
+
+                <h3>DAX</h3>
+
+                <p>
+                    Measures, Filter Context,
+                    CALCULATE and Time Intelligence.
+                </p>
+
+                <div class="tool-info">
+                    <span>6 Questions</span>
+                    <span>Technical</span>
+                </div>
+            </div>
+
+
+            <!-- SQL -->
+            <div class="tool-card">
+                <div class="tool-number">05</div>
+
+                <div class="tool-icon">🗄️</div>
+
+                <h3>SQL</h3>
+
+                <p>
+                    Queries, Joins, Aggregations,
+                    CTEs and Window Functions.
+                </p>
+
+                <div class="tool-info">
+                    <span>6 Questions</span>
+                    <span>Technical</span>
+                </div>
+            </div>
+
+
+            <!-- Python -->
+            <div class="tool-card">
+                <div class="tool-number">06</div>
+
+                <div class="tool-icon">🐍</div>
+
+                <h3>Python</h3>
+
+                <p>
+                    Pandas, DataFrames, GroupBy,
+                    Merge and Data Cleaning.
+                </p>
+
+                <div class="tool-info">
+                    <span>6 Questions</span>
+                    <span>Technical</span>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- Assessment Area -->
+        <div class="tools-assessment">
+
+            <div class="assessment-top">
+
+                <div>
+                    <span class="assessment-label">
+                        FULL TOOLS ASSESSMENT
+                    </span>
+
+                    <h3>
+                        Ready to test your technical skills?
+                    </h3>
+
+                    <p>
+                        40 technical questions covering Excel,
+                        Power Query, Power BI, DAX, SQL and Python.
+                    </p>
+                </div>
+
+                <div class="assessment-stat">
+                    <strong>40</strong>
+                    <span>Questions</span>
+                </div>
+
+            </div>
+
+            <button
+                class="tools-start-btn"
+                onclick="startToolsAssessment()">
+
+                Start Assessment
+                <span>→</span>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==================== TOOLS QUIZ MODAL ==================== -->
+
+<div id="toolsQuizModal" class="tools-quiz-modal">
+
+    <div class="tools-quiz-box">
+
+        <!-- Quiz Header -->
+        <div class="quiz-header">
+
+            <div>
+                <span class="quiz-section-name">
+                    TOOLS ASSESSMENT
+                </span>
+
+                <h2 id="quizCategory">
+                    Excel
+                </h2>
+            </div>
+
+            <button
+                class="quiz-close"
+                onclick="closeToolsAssessment()">
+                ×
+            </button>
+
+        </div>
+
+
+        <!-- Progress -->
+        <div class="quiz-progress-area">
+
+            <div class="quiz-progress-info">
+
+                <span id="quizQuestionNumber">
+                    Question 1 of 40
+                </span>
+
+                <span id="quizScore">
+                    Score: 0
+                </span>
+
+            </div>
+
+            <div class="quiz-progress">
+
+                <div
+                    id="quizProgressBar"
+                    class="quiz-progress-bar">
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Question -->
+        <div class="quiz-question-area">
+
+            <span
+                id="quizType"
+                class="quiz-type">
+                MCQ
+            </span>
+
+            <h3 id="quizQuestion">
+                Question goes here
+            </h3>
+
+            <div id="quizOptions" class="quiz-options">
+            </div>
+
+        </div>
+
+
+        <!-- Feedback -->
+        <div
+            id="quizFeedback"
+            class="quiz-feedback">
+        </div>
+
+
+        <!-- Controls -->
+        <div class="quiz-controls">
+
+            <button
+                id="quizNextBtn"
+                class="quiz-next-btn"
+                onclick="nextToolsQuestion()"
+                disabled>
+
+                Next Question →
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ==================== TOOLS RESULT ==================== -->
+
+<div id="toolsResultModal" class="tools-result-modal">
+
+    <div class="tools-result-box">
+
+        <span class="result-label">
+            ASSESSMENT COMPLETED
+        </span>
+
+        <h2>
+            Your Technical Score
+        </h2>
+
+        <div class="result-score">
+            <span id="finalScore">0</span>
+            <small>/ 40</small>
+        </div>
+
+        <p id="resultMessage">
+            Great work!
+        </p>
+
+        <div class="result-actions">
+
+            <button
+                onclick="restartToolsAssessment()"
+                class="result-restart-btn">
+
+                Try Again
+
+            </button>
+
+            <button
+                onclick="closeToolsResult()"
+                class="result-close-btn">
+
+                Close
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+</main>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script src="interview.js"></script>
+
+</body>
+
+</html>
+
