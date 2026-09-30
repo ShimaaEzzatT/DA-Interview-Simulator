@@ -1080,3 +1080,791 @@ retryBtn.addEventListener(
 renderQuestions();
 
 updateProgress();
+
+
+
+/* =========================================================
+   TOOLS ASSESSMENT
+   ========================================================= */
+
+const toolsQuestions = [
+
+    /* ==================== EXCEL ==================== */
+
+    {
+        category: "Excel",
+        type: "MCQ",
+        question: "You need to return the Product Category based on a Product ID from another table. Which function is the most suitable?",
+        options: [
+            "SUMIFS",
+            "XLOOKUP",
+            "COUNTIFS",
+            "IFERROR"
+        ],
+        answer: 1
+    },
+
+    {
+        category: "Excel",
+        type: "MCQ",
+        question: "You need to calculate total Revenue for the Electronics category in Cairo only. Which function is most appropriate?",
+        options: [
+            "SUM",
+            "SUMIF",
+            "SUMIFS",
+            "COUNTIFS"
+        ],
+        answer: 2
+    },
+
+    {
+        category: "Excel",
+        type: "True / False",
+        question: "An absolute reference such as $A$1 remains fixed when the formula is copied to another cell.",
+        options: [
+            "True",
+            "False"
+        ],
+        answer: 0
+    },
+
+    {
+        category: "Excel",
+        type: "Scenario",
+        question: "You have 500,000 rows of sales data. Every month you receive a new file with the same structure, and you need to repeat the same cleaning steps. What would be the most appropriate approach?",
+        options: [
+            "Use formulas manually every month",
+            "Use Conditional Formatting",
+            "Use Power Query",
+            "Create a new Pivot Table every month"
+        ],
+        answer: 2
+    },
+
+    {
+        category: "Excel",
+        type: "MCQ",
+        question: "Which Excel feature is most suitable for summarizing Revenue by Category and Year?",
+        options: [
+            "Data Validation",
+            "Pivot Table",
+            "Find & Replace",
+            "Text to Columns"
+        ],
+        answer: 1
+    },
+
+    {
+        category: "Excel",
+        type: "Scenario",
+        question: "A lookup formula returns #N/A when a Product ID doesn't exist. Which function can be used to handle this error and display 'Not Found'?",
+        options: [
+            "IF",
+            "IFERROR",
+            "ISBLANK",
+            "COUNTIF"
+        ],
+        answer: 1
+    },
+
+
+    /* ==================== POWER QUERY ==================== */
+
+    {
+        category: "Power Query",
+        type: "MCQ",
+        question: "You have three monthly tables with the same columns: January, February and March. You want one table containing all rows. What should you use?",
+        options: [
+            "Merge",
+            "Append",
+            "Pivot",
+            "Group By"
+        ],
+        answer: 1
+    },
+
+    {
+        category: "Power Query",
+        type: "MCQ",
+        question: "You have a Sales table and a Products table. You want to bring Category into Sales using ProductID. What should you use?",
+        options: [
+            "Append",
+            "Merge",
+            "Unpivot",
+            "Group By"
+        ],
+        answer: 1
+    },
+
+    {
+        category: "Power Query",
+        type: "True / False",
+        question: "Power Query's Unpivot operation converts columns into rows.",
+        options: [
+            "True",
+            "False"
+        ],
+        answer: 0
+    },
+
+    {
+        category: "Power Query",
+        type: "Scenario",
+        question: "A Date column contains values such as 01/05/2026 and 02/05/2026, but Power Query recognizes the column as Text. What should you do?",
+        options: [
+            "Delete the column",
+            "Change the Data Type to Date",
+            "Use Append",
+            "Use Group By"
+        ],
+        answer: 1
+    },
+
+    {
+        category: "Power Query",
+        type: "MCQ",
+        question: "Which transformation would you use to summarize total Revenue by Category?",
+        options: [
+            "Group By",
+            "Merge",
+            "Unpivot",
+            "Split Column"
+        ],
+        answer: 0
+    },
+
+    {
+        category: "Power Query",
+        type: "Scenario",
+        question: "You have columns Product, Jan, Feb, Mar and Apr. You want Product, Month and Sales. Which transformation is most appropriate?",
+        options: [
+            "Merge",
+            "Append",
+            "Unpivot Columns",
+            "Replace Values"
+        ],
+        answer: 2
+    },
+
+
+    /* ==================== POWER BI ==================== */
+
+    {
+        category: "Power BI",
+        type: "MCQ",
+        question: "Which data model is generally recommended for analytical Power BI models?",
+        options: [
+            "Star Schema",
+            "Flat Schema",
+            "Circular Schema",
+            "Many-to-Many Schema"
+        ],
+        answer: 0
+    },
+
+    {
+        category: "Power BI",
+        type: "MCQ",
+        question: "A Product table contains one row per Product, while Sales contains many rows per Product. What relationship should normally exist?",
+        options: [
+            "One-to-One",
+            "One-to-Many",
+            "Many-to-Many",
+            "No relationship"
+        ],
+        answer: 1
+    },
+
+    {
+        category: "Power BI",
+        type: "True / False",
+        question: "A Measure is calculated dynamically based on the current filter context.",
+        options: [
+            "True",
+            "False"
+        ],
+        answer: 0
+    },
+
+    {
+        category: "Power BI",
+        type: "Scenario",
+        question: "You need to calculate Revenue dynamically and allow it to respond to slicers for Year, Region and Product Category. What should you create?",
+        options: [
+            "Calculated Column",
+            "Measure",
+            "Power Query Parameter",
+            "Static Excel Column"
+        ],
+        answer: 1
+    },
+
+    {
+        category: "Power BI",
+        type: "MCQ",
+        question: "Which storage mode loads the data into Power BI's in-memory engine?",
+        options: [
+            "DirectQuery",
+            "Import",
+            "Live Connection",
+            "Streaming"
+        ],
+        answer: 1
+    },
+
+    {
+        category: "Power BI",
+        type: "Scenario",
+        question: "Your Sales and Returns tables are both large Fact tables. You want to analyze them using common dimensions such as Date, Product and Store. What is generally the better modeling approach?",
+        options: [
+            "Create a direct relationship between the two Fact tables",
+            "Connect both Fact tables to shared Dimension tables",
+            "Merge both Fact tables automatically",
+            "Delete one of the Fact tables"
+        ],
+        answer: 1
+    },
+
+
+    /* ==================== DAX ==================== */
+
+    {
+        category: "DAX",
+        type: "MCQ",
+        question: "What is the primary purpose of CALCULATE?",
+        options: [
+            "Create relationships",
+            "Modify filter context",
+            "Remove duplicates",
+            "Change data types"
+        ],
+        answer: 1
+    },
+
+    {
+        category: "DAX",
+        type: "MCQ",
+        question: "What is the main difference between SUM and SUMX?",
+        options: [
+            "SUM works with text while SUMX works with numbers",
+            "SUM aggregates a column, while SUMX iterates over a table and evaluates an expression",
+            "They are identical",
+            "SUMX only works with calculated columns"
+        ],
+        answer: 1
+    },
+
+    {
+        category: "DAX",
+        type: "True / False",
+        question: "Filter Context can affect the result of a DAX Measure.",
+        options: [
+            "True",
+            "False"
+        ],
+        answer: 0
+    },
+
+    {
+        category: "DAX",
+        type: "Scenario",
+        question: "Why would you use SUMX for Revenue when Revenue depends on Quantity × NetPrice for each row?",
+        options: [
+            "Because Revenue depends on a row-level calculation",
+            "Because SUM cannot work with numbers",
+            "Because SUMX removes filters",
+            "Because SUMX creates relationships"
+        ],
+        answer: 0
+    },
+
+    {
+        category: "DAX",
+        type: "MCQ",
+        question: "Which function is commonly used to calculate the same period in the previous year?",
+        options: [
+            "PREVIOUSMONTH",
+            "SAMEPERIODLASTYEAR",
+            "NEXTYEAR",
+            "LASTYEAR"
+        ],
+        answer: 1
+    },
+
+    {
+        category: "DAX",
+        type: "Scenario",
+        question: "You want to calculate Revenue Growth compared with the previous year. Which approach is appropriate?",
+        options: [
+            "Current Revenue − Previous Year Revenue, divided by Previous Year Revenue",
+            "Current Revenue + Previous Year Revenue",
+            "Current Revenue × Previous Year Revenue",
+            "Previous Year Revenue − Current Revenue only"
+        ],
+        answer: 0
+    },
+
+
+    /* ==================== SQL ==================== */
+
+    {
+        category: "SQL",
+        type: "MCQ",
+        question: "Which clause filters rows before aggregation?",
+        options: [
+            "HAVING",
+            "WHERE",
+            "GROUP BY",
+            "ORDER BY"
+        ],
+        answer: 1
+    },
+
+    {
+        category: "SQL",
+        type: "MCQ",
+        question: "Which JOIN returns all records from the left table and matching records from the right table?",
+        options: [
+            "INNER JOIN",
+            "LEFT JOIN",
+            "RIGHT JOIN",
+            "CROSS JOIN"
+        ],
+        answer: 1
+    },
+
+    {
+        category: "SQL",
+        type: "True / False",
+        question: "HAVING is commonly used to filter aggregated results.",
+        options: [
+            "True",
+            "False"
+        ],
+        answer: 0
+    },
+
+    {
+        category: "SQL",
+        type: "Scenario",
+        question: "You need to find customers whose total Revenue is greater than 100,000. Which approach is correct?",
+        options: [
+            "WHERE SUM(Revenue) > 100000",
+            "HAVING SUM(Revenue) > 100000",
+            "ORDER BY SUM(Revenue)",
+            "DISTINCT SUM(Revenue)"
+        ],
+        answer: 1
+    },
+
+    {
+        category: "SQL",
+        type: "MCQ",
+        question: "Which function assigns a sequential number to rows within a result set?",
+        options: [
+            "RANK()",
+            "ROW_NUMBER()",
+            "DENSE_RANK()",
+            "COUNT()"
+        ],
+        answer: 1
+    },
+
+    {
+        category: "SQL",
+        type: "Scenario",
+        question: "You need to find the Top 3 products in each Category. Which SQL feature is particularly useful?",
+        options: [
+            "GROUP BY only",
+            "Window Functions with PARTITION BY",
+            "DISTINCT only",
+            "UNION"
+        ],
+        answer: 1
+    },
+
+
+    /* ==================== PYTHON ==================== */
+
+    {
+        category: "Python",
+        type: "MCQ",
+        question: "Which Python library is primarily used for working with tabular datasets?",
+        options: [
+            "NumPy",
+            "Pandas",
+            "Matplotlib",
+            "Flask"
+        ],
+        answer: 1
+    },
+
+    {
+        category: "Python",
+        type: "MCQ",
+        question: "What does df.head() return?",
+        options: [
+            "Dataset statistics",
+            "First rows of the DataFrame",
+            "Column data types only",
+            "Missing values only"
+        ],
+        answer: 1
+    },
+
+    {
+        category: "Python",
+        type: "True / False",
+        question: "drop_duplicates() can be used to remove duplicate rows from a DataFrame.",
+        options: [
+            "True",
+            "False"
+        ],
+        answer: 0
+    },
+
+    {
+        category: "Python",
+        type: "MCQ",
+        question: "Which method is commonly used to aggregate data by a category?",
+        options: [
+            "groupby()",
+            "sortby()",
+            "categorize()",
+            "summarize()"
+        ],
+        answer: 0
+    },
+
+    {
+        category: "Python",
+        type: "Scenario",
+        question: "You want to calculate total Revenue for every Category. Which approach is appropriate?",
+        options: [
+            'df.groupby("Category")["Revenue"].sum()',
+            'df.sort_values("Revenue")',
+            'df.dropna()',
+            'df.head()'
+        ],
+        answer: 0
+    },
+
+    {
+        category: "Python",
+        type: "Scenario",
+        question: "You have customers and orders DataFrames. Both contain CustomerID. You want to combine information based on CustomerID. Which Pandas operation should you use?",
+        options: [
+            "concat()",
+            "merge()",
+            "groupby()",
+            "append()"
+        ],
+        answer: 1
+    },
+
+
+    /* ==================== BONUS ==================== */
+
+    {
+        category: "Power BI",
+        type: "Technical",
+        question: "In Power BI, which is generally more appropriate for a reusable aggregation such as Total Revenue?",
+        options: [
+            "Calculated Column",
+            "Measure",
+            "Power Query Custom Column",
+            "Excel Formula"
+        ],
+        answer: 1
+    },
+
+    {
+        category: "SQL",
+        type: "Technical",
+        question: "In SQL, the WHERE condition is applied when filtering rows in a query with GROUP BY.",
+        options: [
+            "Before aggregation",
+            "After aggregation",
+            "After ORDER BY",
+            "Only to the final result"
+        ],
+        answer: 0
+    },
+
+    {
+        category: "Power Query",
+        type: "Technical",
+        question: "You have Sales_Jan, Sales_Feb and Sales_Mar with identical columns and need to combine their rows. Should you use Merge or Append?",
+        options: [
+            "Merge",
+            "Append",
+            "Both",
+            "Neither"
+        ],
+        answer: 1
+    },
+
+    {
+        category: "Power BI",
+        type: "Technical",
+        question: "A user selects 2025 from a Year slicer. A normal Revenue Measure should respond to that filter context.",
+        options: [
+            "True",
+            "False"
+        ],
+        answer: 0
+    }
+
+];
+
+
+/* =========================================================
+   QUIZ VARIABLES
+   ========================================================= */
+
+let currentToolsQuestion = 0;
+let toolsScore = 0;
+let selectedAnswer = false;
+
+
+/* =========================================================
+   START ASSESSMENT
+   ========================================================= */
+
+function startToolsAssessment() {
+
+    currentToolsQuestion = 0;
+    toolsScore = 0;
+
+    document
+        .getElementById("toolsQuizModal")
+        .classList.add("active");
+
+    loadToolsQuestion();
+}
+
+
+/* =========================================================
+   LOAD QUESTION
+   ========================================================= */
+
+function loadToolsQuestion() {
+
+    const question = toolsQuestions[currentToolsQuestion];
+
+    selectedAnswer = false;
+
+    document.getElementById("quizCategory").textContent =
+        question.category;
+
+    document.getElementById("quizType").textContent =
+        question.type;
+
+    document.getElementById("quizQuestion").textContent =
+        question.question;
+
+    document.getElementById("quizQuestionNumber").textContent =
+        `Question ${currentToolsQuestion + 1} of ${toolsQuestions.length}`;
+
+    document.getElementById("quizScore").textContent =
+        `Score: ${toolsScore}`;
+
+    document.getElementById("quizProgressBar").style.width =
+        `${((currentToolsQuestion) / toolsQuestions.length) * 100}%`;
+
+    const optionsContainer =
+        document.getElementById("quizOptions");
+
+    optionsContainer.innerHTML = "";
+
+    question.options.forEach((option, index) => {
+
+        const button = document.createElement("button");
+
+        button.className = "quiz-option";
+
+        button.textContent = option;
+
+        button.onclick = () =>
+            selectToolsAnswer(index, button);
+
+        optionsContainer.appendChild(button);
+
+    });
+
+    document.getElementById("quizFeedback").textContent = "";
+
+    document
+        .getElementById("quizFeedback")
+        .className = "quiz-feedback";
+
+    document.getElementById("quizNextBtn").disabled = true;
+}
+
+
+/* =========================================================
+   SELECT ANSWER
+   ========================================================= */
+
+function selectToolsAnswer(index, selectedButton) {
+
+    if (selectedAnswer) return;
+
+    selectedAnswer = true;
+
+    const question =
+        toolsQuestions[currentToolsQuestion];
+
+    const options =
+        document.querySelectorAll(".quiz-option");
+
+    options.forEach(button => {
+        button.disabled = true;
+    });
+
+
+    if (index === question.answer) {
+
+        toolsScore++;
+
+        selectedButton.classList.add("correct");
+
+        document.getElementById("quizFeedback").textContent =
+            "✓ Correct answer!";
+
+        document
+            .getElementById("quizFeedback")
+            .classList.add("correct-text");
+
+    } else {
+
+        selectedButton.classList.add("wrong");
+
+        options[question.answer]
+            .classList.add("correct");
+
+        document.getElementById("quizFeedback").textContent =
+            "✕ Incorrect answer. The correct answer is highlighted.";
+
+        document
+            .getElementById("quizFeedback")
+            .classList.add("wrong-text");
+    }
+
+
+    document.getElementById("quizScore").textContent =
+        `Score: ${toolsScore}`;
+
+    document.getElementById("quizNextBtn").disabled = false;
+}
+
+
+/* =========================================================
+   NEXT QUESTION
+   ========================================================= */
+
+function nextToolsQuestion() {
+
+    currentToolsQuestion++;
+
+    if (currentToolsQuestion >= toolsQuestions.length) {
+
+        finishToolsAssessment();
+
+        return;
+    }
+
+    loadToolsQuestion();
+}
+
+
+/* =========================================================
+   FINISH ASSESSMENT
+   ========================================================= */
+
+function finishToolsAssessment() {
+
+    document
+        .getElementById("toolsQuizModal")
+        .classList.remove("active");
+
+    document
+        .getElementById("toolsResultModal")
+        .classList.add("active");
+
+    document.getElementById("finalScore").textContent =
+        toolsScore;
+
+
+    const percentage =
+        Math.round(
+            (toolsScore / toolsQuestions.length) * 100
+        );
+
+
+    let message = "";
+
+    if (percentage >= 90) {
+
+        message =
+            "Excellent technical performance. Your fundamentals are strong.";
+
+    } else if (percentage >= 75) {
+
+        message =
+            "Great work. Review a few technical areas before your interview.";
+
+    } else if (percentage >= 60) {
+
+        message =
+            "Good start. Keep practicing the technical concepts.";
+
+    } else {
+
+        message =
+            "You need more practice. Review the tools and try again.";
+
+    }
+
+
+    document.getElementById("resultMessage").textContent =
+        message;
+}
+
+
+/* =========================================================
+   CLOSE QUIZ
+   ========================================================= */
+
+function closeToolsAssessment() {
+
+    document
+        .getElementById("toolsQuizModal")
+        .classList.remove("active");
+}
+
+
+/* =========================================================
+   CLOSE RESULT
+   ========================================================= */
+
+function closeToolsResult() {
+
+    document
+        .getElementById("toolsResultModal")
+        .classList.remove("active");
+}
+
+
+/* =========================================================
+   RESTART ASSESSMENT
+   ========================================================= */
+
+function restartToolsAssessment() {
+
+    document
+        .getElementById("toolsResultModal")
+        .classList.remove("active");
+
+    startToolsAssessment();
+}
